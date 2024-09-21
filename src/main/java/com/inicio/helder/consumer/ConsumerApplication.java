@@ -10,6 +10,7 @@
 //@SpringBootApplication
 //public class ConsumerApplication {
 //
+//
 //    ObjectMapper objectMapper = new ObjectMapper();
 //
 //    public static void main(String[] args) {
@@ -36,7 +37,7 @@
 //
 //        try {
 //            // Converte o JSON em um objeto Java
-//            KafkaMensagem _mensagem = objectMapper.readValue(jsonString, KafkaMensagem.class);
+//            KafkaMensagem _mensagem = objectMapper.readValue(mensagem, KafkaMensagem.class);
 //            System.out.println("Nome: " + _mensagem.getName());
 //
 //        } catch (Exception e) {
