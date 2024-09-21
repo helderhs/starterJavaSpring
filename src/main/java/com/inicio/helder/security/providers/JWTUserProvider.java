@@ -1,4 +1,4 @@
-package com.inicio.helder.providers;
+package com.inicio.helder.security.providers;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

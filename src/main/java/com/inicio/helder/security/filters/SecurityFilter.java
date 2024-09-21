@@ -1,6 +1,6 @@
 package com.inicio.helder.security.filters;
 
-import com.inicio.helder.providers.JWTUserProvider;
+import com.inicio.helder.security.providers.JWTUserProvider;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
