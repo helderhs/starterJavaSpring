@@ -1,0 +1,53 @@
+package com.inicio.helder.security;
+
+import com.inicio.helder.security.filters.SecurityFilter;
+import com.inicio.helder.security.filters.SecurityUserFilter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+
+@Configuration
+@EnableMethodSecurity
+public class SecurityConfig {
+
+    private final SecurityUserFilter securityUserFilter;
+    private final SecurityFilter securityFilter;
+
+    private static final String[] PERMITTED_ROUTES_LIST = {
+            "/swagger-ui/**",
+            "/v3/api-docs/**",
+            "/swagger/resources/**",
+            "/actuator/**"
+    };
+
+    public SecurityConfig( final SecurityUserFilter securityUserFilter, final SecurityFilter securityFilter) {
+        this.securityUserFilter = securityUserFilter;
+        this.securityFilter = securityFilter;
+    }
+
+    @Bean
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf(AbstractHttpConfigurer::disable)
+                .authorizeHttpRequests(auth -> {
+                    auth.requestMatchers("/user/auth").permitAll()
+                            .requestMatchers("/user/").permitAll()
+                            .requestMatchers(PERMITTED_ROUTES_LIST).permitAll();
+                    auth.anyRequest().authenticated();
+                })
+                .addFilterBefore(securityUserFilter, BasicAuthenticationFilter.class)
+                .addFilterBefore(securityFilter, BasicAuthenticationFilter.class)
+        ;
+        return http.build();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
