@@ -1,6 +1,6 @@
 package com.inicio.helder.modules.user.services;
 
-import com.inicio.helder.exceptions.errors.ResourceNotFoundException;
+import com.inicio.helder.commons.exceptions.errors.ResourceNotFoundException;
 import com.inicio.helder.modules.user.dto.UserResponse;
 import com.inicio.helder.modules.user.repository.UserRepository;
 import org.springframework.stereotype.Service;

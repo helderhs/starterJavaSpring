@@ -2,7 +2,7 @@ package com.inicio.helder.modules.user.services;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.inicio.helder.exceptions.errors.UnauthorizedException;
+import com.inicio.helder.commons.exceptions.errors.UnauthorizedException;
 import com.inicio.helder.modules.user.dto.AuthUserRequest;
 import com.inicio.helder.modules.user.dto.AuthUserResponse;
 import com.inicio.helder.modules.user.repository.UserRepository;

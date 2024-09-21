@@ -1,4 +1,4 @@
-package com.inicio.helder.exceptions.dto;
+package com.inicio.helder.commons.exceptions.dto;
 
 public class ErrorResposta {
     

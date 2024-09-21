@@ -1,10 +1,10 @@
 package com.inicio.helder.interceptor;
 
 import com.inicio.helder.commons.ConversorData;
-import com.inicio.helder.exceptions.dto.ErrorResposta;
-import com.inicio.helder.exceptions.errors.ResourceBadRequestException;
-import com.inicio.helder.exceptions.errors.ResourceNotFoundException;
-import com.inicio.helder.exceptions.errors.UnauthorizedException;
+import com.inicio.helder.commons.exceptions.dto.ErrorResposta;
+import com.inicio.helder.commons.exceptions.errors.ResourceBadRequestException;
+import com.inicio.helder.commons.exceptions.errors.ResourceNotFoundException;
+import com.inicio.helder.commons.exceptions.errors.UnauthorizedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

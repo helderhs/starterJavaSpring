@@ -1,6 +1,6 @@
 package com.inicio.helder.modules.user.services;
 
-import com.inicio.helder.exceptions.errors.ResourceBadRequestException;
+import com.inicio.helder.commons.exceptions.errors.ResourceBadRequestException;
 import com.inicio.helder.modules.user.dto.UserResponse;
 import com.inicio.helder.modules.user.entities.UserEntity;
 import com.inicio.helder.modules.user.repository.UserRepository;

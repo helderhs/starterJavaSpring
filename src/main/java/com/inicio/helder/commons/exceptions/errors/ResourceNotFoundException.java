@@ -1,4 +1,4 @@
-package com.inicio.helder.exceptions.errors;
+package com.inicio.helder.commons.exceptions.errors;
 
 public class ResourceNotFoundException extends RuntimeException {
     
