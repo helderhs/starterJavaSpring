@@ -6,8 +6,6 @@ import com.inicio.helder.modules.user.dto.UpdateUserRequest;
 import com.inicio.helder.modules.user.dto.UserResponse;
 import com.inicio.helder.modules.user.entities.UserEntity;
 import com.inicio.helder.modules.user.services.*;
-//import com.hocinesehanine.gestao_vagas.modules.job.entities.JobEntity;
-//import com.hocinesehanine.gestao_vagas.modules.job.usecases.FindJobsByFilters;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
